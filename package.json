@@ -1,0 +1,30 @@
+{
+  "name": "practice-problems",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test all": "mocha ./problems --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billbaincodes/JS-Practice-Problems.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/billbaincodes/JS-Practice-Problems/issues"
+  },
+  "homepage": "https://github.com/billbaincodes/JS-Practice-Problems#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}

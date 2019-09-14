@@ -1,7 +1,8 @@
 
-const problem = () => {
+const problem = (str) => {
   // Your code here
-  return 'candy';
+  str = str.split('').reverse().join('')
+  return str;
 }
 
 module.exports = problem;

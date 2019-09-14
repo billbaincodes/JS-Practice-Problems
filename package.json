@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "test all": "mocha ./problems --recursive"
+    "test": "mocha problems --recursive"
   },
   "repository": {
     "type": "git",

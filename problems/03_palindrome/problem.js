@@ -1,4 +1,3 @@
-const { compact } = require('lodash')
 
 const problem = (str) => {
   // Your code here

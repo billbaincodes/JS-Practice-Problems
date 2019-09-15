@@ -5,8 +5,10 @@ const problem = (str) => {
   result = result.reduce((accum, letter) => {
     if (letter === ' ') { return accum; }
     if (!accum[letter]) {
+      // eslint-disable-next-line no-param-reassign
       accum[letter] = 1;
     } else {
+      // eslint-disable-next-line no-param-reassign
       accum[letter] += 1;
     }
     return accum;

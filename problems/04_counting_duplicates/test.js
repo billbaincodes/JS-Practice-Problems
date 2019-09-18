@@ -18,4 +18,9 @@ describe('Counting Duplicates', () => {
     chai.expect(result).to.equal(2)
   });
 
+  it('Correctly counts "aA11"', () => {
+    let result = problem('aAa bb a A   A B !!!')
+    chai.expect(result).to.equal(3)
+  });
+
 });

@@ -34,3 +34,5 @@ problem.write('}\n')
 problem.write('\n')
 problem.write('module.exports = problem;\n')
 problem.close
+
+os.chdir('..')

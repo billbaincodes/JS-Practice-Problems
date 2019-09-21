@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha problems --recursive",
-    "problem": "mkdir XX_problem && cd XX_problem && touch problem.js && touch prompt.md && touch test.js"
+    "problem": "cd problems && mkdir XX_problem && cd XX_problem && touch problem.js && touch prompt.md && touch test.js"
   },
   "repository": {
     "type": "git",

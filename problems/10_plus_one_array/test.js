@@ -23,6 +23,10 @@ describe('+1 Array', () => {
     chai.expect(result).to.deep.equal([4, 3, 2, 6]);
   });
 
+  it('Correctly +1\'s big boi', () => {
+    let result = problem([9, 2, 2, 3, 3, 7, 2, 0, 3, 6, 8, 5, 4, 7, 7, 5, 8, 0, 7]);
+    chai.expect(result).to.deep.equal([9, 2, 2, 3, 3, 7, 2, 0, 3, 6, 8, 5, 4, 7, 7, 5, 8, 0, 8]);
+  });
 
 });
 

@@ -14,7 +14,7 @@ prompt.close
 
 chaiTest = open('test.js', 'w+')
 chaiTest.write("const chai = require('chai');\n")
-chaiTest.write("const problem = require('./problem.js');\n")
+chaiTest.write("const problem = require('./problem');\n")
 chaiTest.write("\n")
 chaiTest.write("describe('problem name', () => {\n")
 chaiTest.write("  it('should pass', () => {\n")

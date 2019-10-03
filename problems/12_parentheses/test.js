@@ -8,12 +8,12 @@ describe('Parentheses', () => {
     chai.expect(result).to.equal(true)
   });
 
-  it('Find ")(()))" to be true', () => {
+  it('Find ")(()))" to be false', () => {
     let result = problem(')(()))');
     chai.expect(result).to.be.false
   });
 
-  it('Find "(" to be true', () => {
+  it('Find "(" to be false', () => {
     let result = problem('(');
     chai.expect(result).to.equal(false)
   });

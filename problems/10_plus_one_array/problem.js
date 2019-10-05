@@ -8,7 +8,6 @@ const problem = (arr) => {
   }
   let result = []
   let number = arr.join('')
-  console.log('number', number)
   number++
   numberString = number.toString()
 

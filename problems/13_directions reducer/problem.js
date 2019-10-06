@@ -1,5 +1,5 @@
 const problem = arr => {
-  // Your code here
+  // Check opposites against this arr
   let opposites = [
     ["NORTH", "SOUTH"],
     ["SOUTH", "NORTH"],
@@ -7,6 +7,7 @@ const problem = arr => {
     ["WEST", "EAST"]
   ];
 
+  // Helper fn to find opps
   let oppositeFinder = array => {
     let result = false
     opposites.forEach(pair => {
@@ -17,21 +18,41 @@ const problem = arr => {
     return result
   };
 
-  let answer = []
-  console.log('arr', arr)
+  // Loop thru recursively, removing opps until DRY
+  let recurStrat = (directions) => {
+    for (let i = 0; i < directions.length; i++) {
+      let front2 = directions.slice(i, i+2)
+      if (oppositeFinder(front2)) {
+        directions.splice(i, 2) 
+        recurStrat(directions)
+      }
+    }
+    return directions
+  }
 
+  return recurStrat(arr)
+};
+
+module.exports = problem;
+
+
+
+/*
+
+
+  // Main Logic
   for (let i = 0; i < arr.length; i++) {
+    console.log('i', i)
     let front2 = [arr[i], arr[i+1]];
-    
+
     if (oppositeFinder(front2)) {
       i += 2
     } else {
-      // if (arr[i+1] === undefined) { return answer}
       answer.push(arr[i])
     }
     console.log('answer', answer)
   }
   return answer
-};
 
-module.exports = problem;
+
+  */

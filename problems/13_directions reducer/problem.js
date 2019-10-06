@@ -17,16 +17,21 @@ const problem = arr => {
     return result
   };
 
+  let answer = []
+  console.log('arr', arr)
+
   for (let i = 0; i < arr.length; i++) {
-    console.log('arr1', arr)
-    let front2 = [arr[0], arr[1]];
-    console.log('front2', front2)
+    let front2 = [arr[i], arr[i+1]];
+    
     if (oppositeFinder(front2)) {
-      arr.splice(0, 2);
+      i += 2
+    } else {
+      // if (arr[i+1] === undefined) { return answer}
+      answer.push(arr[i])
     }
-    console.log('arr2', arr)
+    console.log('answer', answer)
   }
-  return arr;
+  return answer
 };
 
 module.exports = problem;

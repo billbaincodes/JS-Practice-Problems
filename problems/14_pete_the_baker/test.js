@@ -19,5 +19,13 @@ describe('Pete the Baker', () => {
     chai.expect(result).to.equal(0)
   });
 
+  it('Returns correct cakes for large availability.', () => {
+    let result = problem(
+      {"cream":64,"apples":41,"eggs":76},
+      {"cream":4300,"flour":4600,"apples":6600,"crumbles":1900,"sugar":8600,"milk":3800,"cocoa":5000,"chocolate":2600,"eggs":6500,"pears":2700,"oil":8500,"butter":2900,"nuts":6500}
+    );
+    chai.expect(result).to.equal(67)
+  });
+
 });
 

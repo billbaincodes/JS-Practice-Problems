@@ -10,6 +10,7 @@ const problemA = (ip) => {
 
 const problemB = (num) => {
   let bigBin = num.toString(2)
+  console.log('bigBin', bigBin)
   let fourBins = []
   let start = 0
   let end = 8
@@ -21,8 +22,8 @@ const problemB = (num) => {
     end += 8
   }
 
-  console.log(fourBins)
-  return fourBins 
+  let answer = fourBins.map(bin => { return parseInt(bin, 2) })
+  return answer.join('.')
 }
 
 module.exports = {

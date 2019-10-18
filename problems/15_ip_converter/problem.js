@@ -10,7 +10,11 @@ const problemA = (ip) => {
 
 const problemB = (num) => {
   let bigBin = num.toString(2)
-  console.log('bigBin', bigBin)
+
+  while(bigBin.length < 32){
+    bigBin = `0${bigBin}`
+  }
+
   let fourBins = []
   let start = 0
   let end = 8

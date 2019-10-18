@@ -20,7 +20,7 @@ describe('IP Converter', () => {
 
   it('Converts 2953838593', () => {
     let result = problemB(2953838593);
-    chai.expect(result).to.equal('176.16.0.1')
+    chai.expect(result).to.deep.equal('176.16.0.1')
   });
 
   

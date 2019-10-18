@@ -9,7 +9,20 @@ const problemA = (ip) => {
 }
 
 const problemB = (num) => {
-  return 'answer'
+  let bigBin = num.toString(2)
+  let fourBins = []
+  let start = 0
+  let end = 8
+
+  for (let i = 0; i < 4; i++){
+    let octet = bigBin.slice(start, end);
+    fourBins.push(octet)
+    start += 8
+    end += 8
+  }
+
+  console.log(fourBins)
+  return fourBins 
 }
 
 module.exports = {

@@ -51,17 +51,17 @@ describe('Password Validator', () => {
     });
   })
 
-  describe('Contains only alphanumerics', () => {
-    it('Rejects invalid characters', () => {
-      let result = problem('password@#$%^');
-      chai.expect(result).to.be.false
-    });
+  // describe('Contains only alphanumerics', () => {
+  //   it('Rejects invalid characters', () => {
+  //     let result = problem('password@#$%^');
+  //     chai.expect(result).to.be.false
+  //   });
 
-    it('Accepts letters and numbers', () => {
-      let result = problem('1A2b3c4d');
-      chai.expect(result).to.be.true
-    });
-  })
+  //   it('Accepts letters and numbers', () => {
+  //     let result = problem('1A2b3c4d');
+  //     chai.expect(result).to.be.true
+  //   });
+  // })
 
   describe('Checks all requirements', () => {
     it('Accepts valid password #1', () => {

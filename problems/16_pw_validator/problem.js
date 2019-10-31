@@ -6,7 +6,7 @@ const problem = (pw) => {
   const upper = /[A-Z]{1}/
   const number = /\d{1}/
 
-  return length.test(pw)
+  return /(?=.{6,})(?=[a-z]{1})/.test(pw)
 }
 
 module.exports = problem;

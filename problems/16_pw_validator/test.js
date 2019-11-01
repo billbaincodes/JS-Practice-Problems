@@ -10,7 +10,7 @@ describe('Password Validator', () => {
     });
 
     it('Correct length', () => {
-      let result = problem('password');
+      let result = problem('Passssssssssssword123');
       chai.expect(result).to.be.true
     });
   })

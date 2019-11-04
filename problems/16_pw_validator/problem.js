@@ -5,7 +5,7 @@ const problem = (pw) => {
   const lower = /[a-z]{1}/
   const upper = /[A-Z]{1}/
   const number = /\d{1}/
-  const regex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$")
+  const regex = new RegExp("^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$")
 
   return regex.test(pw)
 }

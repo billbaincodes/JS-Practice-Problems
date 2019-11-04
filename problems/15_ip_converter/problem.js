@@ -9,25 +9,11 @@ const problemA = (ip) => {
 }
 
 const problemB = (num) => {
-  let bigBin = num.toString(2)
-
-  while(bigBin.length < 32){
-    bigBin = `0${bigBin}`
-  }
-
   let fourBins = []
-  let start = 0
-  let end = 8
-
-  for (let i = 0; i < 4; i++){
-    let octet = bigBin.slice(start, end);
-    fourBins.push(octet)
-    start += 8
-    end += 8
-  }
-
-  let answer = fourBins.map(bin => { return parseInt(bin, 2) })
-  return answer.join('.')
+  let bigBin = num.toString(2)
+  while(bigBin.length < 32){ bigBin = `0${bigBin}` }
+  for (let i = 0; i < 32; i += 8){ fourBins.push(bigBin.slice(i, i+8)) }
+  return fourBins.map(bin => { return parseInt(bin, 2) }).join('.')
 }
 
 module.exports = {

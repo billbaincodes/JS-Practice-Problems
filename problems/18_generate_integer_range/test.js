@@ -1,0 +1,15 @@
+const chai = require('chai');
+const problem = require('./problem');
+
+describe('Generate Integer Range', () => {
+  it('Calculates range for 2, 10, 2', () => {
+    let result = problem(2, 10, 2);
+    chai.expect(result).to.equal([2, 4, 6, 8])
+  });
+
+  it('Calculates range for 1, 10, 3', () => {
+    let result = problem(1, 10, 3);
+    chai.expect(result).to.equal([1, 4, 7, 10])
+  });
+});
+

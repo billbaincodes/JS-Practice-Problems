@@ -11,5 +11,15 @@ describe('Generate Integer Range', () => {
     let result = problem(1, 10, 3);
     chai.expect(result).to.deep.equal([1, 4, 7, 10])
   });
+
+  it('Calculates range for 1, 10, 5', () => {
+    let result = problem(1, 10, 5);
+    chai.expect(result).to.deep.equal([1, 6])
+  });
+
+  it('Calculates range for 1, 10, 4', () => {
+    let result = problem(1, 10, 4);
+    chai.expect(result).to.deep.equal([1, 5, 9])
+  });
 });
 

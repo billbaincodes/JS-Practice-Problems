@@ -1,22 +1,21 @@
 
 const problem = (str) => {
   // Your code here
-
   arr = str.split("")
 
   let dupes = arr.reduce((accum, curr) => {
-
-    if (accum.curr){
-      accum.curr++
+    let lower = curr.toLowerCase()
+    if (accum[lower]){
+      accum[lower]++
     } else {
-      accum.curr = 1
+      accum[lower] = 1
     }
     return accum
-
   }, {})
 
   return arr.map((letter) => {
-    if (dupes.letter) {
+    let check = dupes[letter.toLowerCase()]
+    if (check > 1) {
       return ')'
     } else {
       return '('

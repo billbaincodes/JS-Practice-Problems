@@ -1,10 +1,21 @@
 const chai = require('chai');
 const problem = require('./problem');
 
-describe('problem name', () => {
-  it('should pass', () => {
-    let result = problem();
-    chai.expect(result).to
+describe('Missing Letter', () => {
+
+  it('Finds missing lowercase letter', () => {
+    let result = problem(["a","b","c","d","f"]);
+    chai.expect(result).to.equal('e')
   });
+  
+  it('Finds missing uppercase letter', () => {
+    let result = problem(["O","Q","R","S"]);
+    chai.expect(result).to.equal('P') 
+  });
+
 });
 
+/*
+["a","b","c","d","f"] / e
+["O","Q","R","S"] / P
+*/

@@ -14,8 +14,3 @@ describe('Missing Letter', () => {
   });
 
 });
-
-/*
-["a","b","c","d","f"] / e
-["O","Q","R","S"] / P
-*/

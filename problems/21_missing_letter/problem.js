@@ -5,12 +5,11 @@ const problem = (arr) => {
 
   arr.reduce((prev, letter) => {
     let currCode = letter.charCodeAt()
-
     if (prev + 1 !== currCode) {
       answer = String.fromCharCode(prev + 1)
     } 
     prev = currCode
-    return prev.fromChar
+    return prev
   }, '')
 
   return answer

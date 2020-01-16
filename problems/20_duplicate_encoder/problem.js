@@ -2,42 +2,15 @@
 const problem = (str) => {
   // Your code here
   arr = str.split("")
-
-  let answer =  arr.map((letter, i) => {
-
-
-    for ( let j = 0; j < arr.length ; j++) {
-      let l2 = arr[j]
-      console.log({ letter, l2})
-      if (j !== i) {
-        if (letter.toLowerCase() == l2.toLowerCase()) {
-          console.log('DUUPE')
-          return ')'
-        } else {
-          return '('
-        }
+  return arr.map((l1, i) => {
+    let dupe
+    for (let j = 0; j < arr.length ; j++) {
+      if (j !== i) { dupe = l1.toLowerCase() == arr[j].toLowerCase() ? true : dupe }
     }
-  }
-
-
-
-    // return arr.forEach((l2, i2) => {
-    //   console.log({ letter, l2})
-    //   if (i2 !== i) {
-    //     if (letter.toLowerCase() == l2.toLowerCase()) {
-    //       console.log('DUUPE')
-    //       return ')'
-    //     } else {
-    //       return '('
-    //     }
-    //   }
-    // })
-
+    return dupe ? ')' : '('
   }).join('')
 
-  console.log({ answer });
-  return answer;
-
+  // original answer
   let dupes = arr.reduce((accum, curr) => {
     let lower = curr.toLowerCase()
     accum[lower] ? accum[lower]++ : accum[lower] = 1

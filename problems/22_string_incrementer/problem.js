@@ -1,7 +1,7 @@
 
 const problem = (str) => {
   // Your code here
-  let zeroes = str.match(/\d+$/)
+  let lead = str.match(/^.+0+/)
   let match = str.match(/[0-9]+$/)
 
   if (!match) { return `${str}1` }
@@ -9,7 +9,12 @@ const problem = (str) => {
   let newVal = Number(match[0]) + 1
   let letters = str.substring(0, str.length - match[0].length)
 
-  return `${letters}${newVal}`
+  if (Number(match[0]) == 0 || (String(newVal).length > String(Number(match[0])).length && str[letters.length] == '0')) {
+    let result = lead[0].split('').splice(0, lead[0].length-1).join('')
+    return result + newVal
+  }
+
+  return str.replace(String(Number(match[0])), newVal)
 }
 
 module.exports = problem;

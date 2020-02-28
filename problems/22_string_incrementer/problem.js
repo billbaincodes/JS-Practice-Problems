@@ -1,7 +1,7 @@
 
 const problem = (str) => {
   // Your code here
-  let lead = str.match(/^.+0+/)
+  let lead = str.match(/^.+0+/i)
   let match = str.match(/[0-9]+$/)
 
   if (!match) { return `${str}1` }

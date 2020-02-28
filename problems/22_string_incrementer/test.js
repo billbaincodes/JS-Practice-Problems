@@ -22,6 +22,11 @@ describe('string incrementer', () => {
     chai.expect(result).to.equal('foo100')
   });
 
+  it('handle just numbers', () => {
+    let result = problem('009');
+    chai.expect(result).to.equal('010')
+  });
+
   it('should do it all', () => {
     let result = problem('foobar000');
     chai.expect(result).to.equal('foobar001')
@@ -30,4 +35,3 @@ describe('string incrementer', () => {
     chai.expect(result2).to.equal('foo0100')
   })
 });
-

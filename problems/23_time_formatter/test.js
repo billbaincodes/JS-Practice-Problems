@@ -2,6 +2,11 @@ const chai = require('chai');
 const problem = require('./problem');
 
 describe('time formatter', () => {
+  it('should handle zero', () => {
+    let result = problem(0);
+    chai.expect(result).to.equal('now')
+  });
+
   it('should handle seconds', () => {
     let result = problem(1);
     chai.expect(result).to.equal('1 second')
@@ -13,7 +18,7 @@ describe('time formatter', () => {
   });
 
   it('should use one unit of time when possible ', () => {
-    let result = problem(62);
+    let result = problem(120);
     chai.expect(result).to.equal('2 minutes')
   });
 

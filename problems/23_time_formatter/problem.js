@@ -1,39 +1,46 @@
-
-const problem = (time) => {
+const problem = time => {
   // Your code here
-  if (time === 0) { return 'now' }
-
-  //Minutes
-  if (time > 60 && time < 3600) {
-    let seconds = time%60
-    let minutes = Math.floor(time/60)
-    return `${minutes} minute and ${seconds} ${seconds > 1 ? 'seconds' : 'second'}`
-  } else if (time > 3600) {
-    let hours = Math.floor(time/3600)
-    let hRemainder = time % 3600
-    let minutes = Math.floor(hRemainder/60)
-    let seconds = hRemainder % 60
-
-    hourPrint = hours ? hours > 1 ? `${hours} hours` : `${hours} hour` : null
-    minutePrint = minutes ? minutes > 1 ? `${minutes} minutes` : `${hours} minute` : null
-    secondPrint = seconds ? seconds > 1 ? `${seconds} seconds` : `${seconds} second` : null
-
-    let print = [hourPrint, minutePrint, secondPrint]
-    print = print.filter(val => val)
-
-    print = print.map((unit, idx) => {
-      if (idx === print.length - 1){
-        return unit += `and ${unit}`
-      } else {
-        return unit += `${unit},`
-      }
-    })
-
-    return print.join(' ')
+  if (time === 0) {
+    return "now";
   }
 
-  return `${time} ${time > 1 ? 'seconds' : 'second'}`
-}
+  let hours = Math.floor(time / 3600);
+  let hRemainder = time % 3600;
+  let minutes = Math.floor(hRemainder / 60);
+  let seconds = hRemainder % 60;
+
+  hourPrint = hours ? (hours > 1 ? `${hours} hours` : `${hours} hour`) : null;
+  minutePrint = minutes
+    ? minutes > 1
+      ? `${minutes} minutes`
+      : `${minutes} minute`
+    : null;
+  secondPrint = seconds
+    ? seconds > 1
+      ? `${seconds} seconds`
+      : `${seconds} second`
+    : null;
+
+  let print = [hourPrint, minutePrint, secondPrint];
+
+  print = print.filter(val => val);
+
+  if (print.length > 1) {
+    print = print.map((unit, idx) => {
+      if (idx === print.length - 2) {
+        return unit;
+      } else if (idx === print.length - 1) {
+        return `and ${unit}`;
+      } else {
+        return `${unit},`;
+      }
+    });
+
+    return print.join(" ");
+  } else {
+    return print[0];
+  }
+};
 
 module.exports = problem;
 

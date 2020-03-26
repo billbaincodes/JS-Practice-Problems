@@ -7,9 +7,7 @@ const problem = (prod) => {
     if (fib1 * fib2 === prod) { 
       return [ fib1, fib2, true ]
     }
-    nextFib = fib1 + fib2
-    fib1 = fib2
-    fib2 = nextFib
+    [fib1, fib2] = [fib2, (fib1 + fib2)]
   };
   return [ fib1, fib2, false ];
 }

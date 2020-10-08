@@ -1,3 +1,4 @@
+const { result } = require("lodash");
 
 const problem = (num) => {
   // Your code here
@@ -6,24 +7,29 @@ const problem = (num) => {
   let arr = `${num}`.split('')
   let rounds = arr.length;
 
-  let result = []
-  for (let i = 0; i < rounds; i++) {
-    for (let j = 0; j < rounds; j++) {
-      let currArr = `${num}`.split('');
-      console.log({currArr})
-      currArr[i] = currArr[j];
-      result.push(currArr)
+  let findPermutations = (string) => {
+    if (string.length < 2 ){
+      return string
     }
+  
+    let permutationsArray = []
+    for (let i = 0; i < string.length; i++){
+      let char = string[i]
+  
+      if (string.indexOf(char) != i)
+      continue
+  
+      let remainingChars = string.slice(0, i) + string.slice(i + 1, string.length)
+      for (let permutation of findPermutations(remainingChars)){
+        permutationsArray.push(char + permutation) }
+    }
+    return permutationsArray
   }
 
-  console.log({ result })
-  for (let i = 0; i < result.length; i++) {
-    if (result[i] > num) {
-      return result[i]
-    }
-  }
+  result = findPermutations(arr)
+  result.sort()
+  return result[0]
 
-  return -1
 }
 
 module.exports = problem;

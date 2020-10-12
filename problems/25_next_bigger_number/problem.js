@@ -1,12 +1,9 @@
-const { result } = require("lodash");
-
 const problem = (num) => {
   // Your code here
   if (num < 10) { return -1 }
 
-  let arr = `${num}`.split('')
-  let rounds = arr.length;
-
+  let arr = `${num}`
+  
   let findPermutations = (string) => {
     if (string.length < 2 ){
       return string
@@ -26,10 +23,9 @@ const problem = (num) => {
     return permutationsArray
   }
 
-  result = findPermutations(arr)
-  result.sort()
-  return result[0]
-
+  permList = findPermutations(arr).sort();
+  let current = permList.indexOf(arr)
+  return Number(permList[current+1]) || -1;
 }
 
 module.exports = problem;

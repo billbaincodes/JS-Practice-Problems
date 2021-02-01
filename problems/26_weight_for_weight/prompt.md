@@ -5,6 +5,8 @@ I am the one who establishes the list so I told him: "Don't worry any more, I wi
 
 For example 99 will have "weight" 18, 100 will have "weight" 1 so in the list 100 will come before 99.
 
+When two numbers have the same "weight", let us class them as if they were strings (alphabetical ordering) and not numbers:
+
 Given a string with the weights of FFC members in normal order can you give this string ordered by "weights" of these numbers?
 
 ## Input / Output

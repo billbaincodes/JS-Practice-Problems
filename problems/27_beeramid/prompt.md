@@ -6,11 +6,14 @@ A beer can pyramid will square the number of cans in each level - 1 can in the t
 
 Complete the beeramid function to return the number of complete levels of a beer can pyramid you can make, given the parameters of:
 
-- your referral bonus
-- the price of a beer can
+- Your referral bonus
+- The price of a beer can
 
 
 ## Input / Output
 
+```
 beeramid(1500, 2); // should === 12
+
 beeramid(5000, 3); // should === 16
+```

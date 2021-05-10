@@ -20,7 +20,7 @@
   "homepage": "https://github.com/billbaincodes/JS-Practice-Problems#readme",
   "dependencies": {
     "chai": "^4.2.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mocha": "^6.2.0"
   },
   "devDependencies": {
